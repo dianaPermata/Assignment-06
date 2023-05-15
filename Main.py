@@ -1,16 +1,21 @@
-from math_function import add
-
+from Math_function import add, multiply, divide
 
 def main():
-
-    data_1 = int(input("masukkan input 1 :"))
-    data_2 = int(input("masukkan input 2 :"))
-    operator = input("masukkan operator :")
+    data_1 = int(input("masukkan input 1: "))
+    data_2 = int(input("masukkan input 2: "))
+    operator = input("masukkan operator: ")
 
     if operator == "+":
         result = add(data_1, data_2)
+    elif operator == "*":
+        result = multiply(data_1, data_2)
+    elif operator == "/":
+        result = divide(data_1, data_2)
+    else:
+        print("Operator tidak valid")
+        return
 
-    print("{} {} {} = {} ".format(data_1, operator, data_2, result))
+    print("{} {} {} = {}".format(data_1, operator, data_2, result))
 
 
 if __name__ == "__main__":
